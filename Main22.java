@@ -1,10 +1,10 @@
 //Pattern
 
 import java.util.Scanner;
-public class Main17 {
+public class Main22 {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        int n ,i ,j;
+        int n ,i ,j ,k;
 
         System.out.print("\nEnter a NUMBER = ");
         n = scan.nextInt();
@@ -12,8 +12,16 @@ public class Main17 {
         System.out.println();
         if(n>0){
             for(i=1 ; i<=n ; i++){
-                for(j=1 ; j<=i ; j++){
-                    System.out.print("*");
+                for(j=1 ; j<=n-i ; j++){
+                    System.out.print(" ");
+                }
+
+                for(k=1 ; k<=2*i-1 ; k++){
+                    if(k==1 || k==2*i-1 || i==n){
+                        System.out.print("*");
+                    }else{
+                        System.out.print(" ");
+                    }
                 }
                 System.out.println();
             }
